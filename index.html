@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Story Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-book-open"></i> AI Story Generator</h1>
+        </header>
+
+        <main>
+            <div class="story-form">
+                <div class="input-group prompt-group">
+                    <label for="prompt"><i class="fas fa-pencil-alt"></i> Story Prompt:</label>
+                    <textarea id="prompt" placeholder="Enter your story idea here..."></textarea>
+                </div>
+
+                <div class="input-options">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="genre"><i class="fas fa-theater-masks"></i> Genre:</label>
+                            <select id="genre">
+                                <option value="fantasy">Fantasy</option>
+                                <option value="scifi">Science Fiction</option>
+                                <option value="romance">Romance</option>
+                                <option value="horror">Horror</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="adventure">Adventure</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="tone"><i class="fas fa-palette"></i> Tone:</label>
+                            <select id="tone">
+                                <option value="funny">Funny</option>
+                                <option value="serious">Serious</option>
+                                <option value="dramatic">Dramatic</option>
+                                <option value="mysterious">Mysterious</option>
+                                <option value="romantic">Romantic</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="wordCount"><i class="fas fa-ruler-horizontal"></i> Word Count:</label>
+                            <select id="wordCount">
+                                <option value="300">Short (300 words)</option>
+                                <option value="600">Medium (600 words)</option>
+                                <option value="1000">Long (1000 words)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="language"><i class="fas fa-language"></i> Language:</label>
+                            <select id="language">
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="French">French</option>
+                                <option value="German">German</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Russian">Russian</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Korean">Korean</option>\n<option value="Dutch">Dutch</option>\n<option value="Swedish">Swedish</option>\n<option value="Gujarati">Gujarati</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="character"><i class="fas fa-user"></i> Main Character:</label>
+                            <select id="character">
+                                <option value="hero">Brave Hero</option>
+                                <option value="villain">Cunning Villain</option>
+                                <option value="detective">Detective</option>
+                                <option value="scientist">Genius Scientist</option>
+                                <option value="wizard">Mysterious Wizard</option>
+                                <option value="robot">Artificial Intelligence</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="setting"><i class="fas fa-globe"></i> Setting:</label>
+                            <select id="setting">
+                                <option value="city">Modern City</option>
+                                <option value="castle">Ancient Castle</option>
+                                <option value="space">Deep Space</option>
+                                <option value="jungle">Mysterious Jungle</option>
+                                <option value="dystopia">Futuristic Dystopia</option>
+                                <option value="haunted">Haunted House</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="plotTwist"><i class="fas fa-random"></i> Plot Twist:</label>
+                            <select id="plotTwist">
+                                <option value="yes">Yes, add a plot twist</option>
+                                <option value="no">No, keep it straightforward</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="ending"><i class="fas fa-flag-checkered"></i> Ending Type:</label>
+                            <select id="ending">
+                                <option value="happy">Happy Ending</option>
+                                <option value="sad">Sad Ending</option>
+                                <option value="cliffhanger">Cliffhanger</option>
+                                <option value="unexpected">Unexpected Twist</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group button-group">
+                        <button id="generate-btn"><i class="fas fa-magic"></i> Generate Story</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-output">
+                <h2><i class="fas fa-book"></i> Your Generated Story</h2>
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p><i class="fas fa-pen-fancy"></i> Crafting your story...</p>
+                </div>
+                <div id="story-content" class="story-content">
+                    <p class="placeholder"><i class="fas fa-feather"></i> Your story will appear here...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
